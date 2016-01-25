@@ -1,5 +1,7 @@
-syntax on                     " syntax highlighing
-filetype plugin indent on     " enable loading indent file for filetype
+" https://github.com/sdiehl/haskell-vim-proto
+
+syntax on
+filetype plugin indent on
 
 set nocompatible
 set number
