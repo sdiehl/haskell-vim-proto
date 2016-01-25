@@ -1,3 +1,39 @@
 [submodule "vim/bundle/ghcmod-vim"]
 	path = vim/bundle/ghcmod-vim
 	url = https://github.com/eagletmt/ghcmod-vim.git
+[submodule "vim/bundle/neco-ghc"]
+	path = vim/bundle/neco-ghc
+	url = https://github.com/eagletmt/neco-ghc
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/tlib_vim"]
+	path = vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim/bundle/vim-addon-mw-utils"]
+	path = vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vim/bundle/vim-snipmate"]
+	path = vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/tabular"]
+	path = vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "vim/bundle/neocomplete.vim"]
+	path = vim/bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule "vim/bundle/vimproc.vim"]
+	path = vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
