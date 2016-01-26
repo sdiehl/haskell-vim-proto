@@ -1,0 +1,240 @@
+snippet case
+	case ${1} of
+	  ${2:_} -> ${3:undefined}
+
+snippet do
+
+	  do ${1:undefined}
+	     ${2:undefined}
+
+snippet wh
+
+	where
+	  ${1:fn} = ${2:undefined}
+
+snippet let
+	let ${1} = ${2}
+	in ${3}
+
+snippet new
+	newtype ${1:name} = $1 { un$1 :: ${2} }
+	  deriving ($4)
+
+snippet mod
+	module ${1} (
+	  ${2},
+	) where
+
+snippet if
+	if ${1}
+	then ${2}
+	else ${3}
+
+snippet im
+	import qualified ${1:Data.Text} as ${2:T}
+
+snippet iq
+	import qualified ${1:Data.Text} as ${2:T}
+
+snippet cl
+	class ${1:Name} where
+	  ${2:name} :: ${3}
+
+snippet in
+	instance ${1:Class} ${2:Type} where
+	  ${3}
+
+snippet rec
+	data ${1} = ${2}
+		{ ${3} :: ${4:T}
+		} deriving (${6:classes})
+
+snippet ff
+	foreign import ccall safe "${1:cfunction}" ${2:name}
+	    :: ${3:function}
+
+snippet pra 
+	{-# LANGUAGE ${1} #-}
+
+snippet case
+
+	case ${1} of
+	     ${2} -> ${3}
+
+
+snippet \
+	(\ ${1} -> ${2:undefined})
+
+snippet bar
+	-------------------------------------------------------------------------------
+	-- ${1}
+	-------------------------------------------------------------------------------
+
+snippet mm
+	import Control.Monad
+	import Control.Applicative
+	import Control.Monad.State
+	import Control.Monad.Reader
+	import Control.Monad.Except
+
+snippet usual
+	import Data.Maybe
+	import Data.Functor
+	import Data.Foldable
+	import Data.Traversable
+	import Control.Monad
+	import Control.Applicative
+
+snippet fold
+	import Data.Foldable
+	import Data.Traversable
+
+snippet bs
+	import qualified Data.ByteString as S
+	import qualified Data.ByteString.Char8 as S8
+
+snippet containers
+	import qualified Data.HashMap.Lazy as HashMap
+	import qualified Data.HashSet      as HashSet
+	import qualified Data.IntMap       as IntMap
+	import qualified Data.IntSet       as IntSet
+	import qualified Data.IxSet        as IxSet
+	import qualified Data.Map          as Map
+	import qualified Data.Sequence     as Seq
+	import qualified Data.Set          as Set
+
+snippet str 
+	{-# LANGUAGE OverloadedStrings #-}
+
+snippet gadt 
+	{-# LANGUAGE GADTs #-}
+
+snippet rank
+	{-# LANGUAGE RankNTypes #-}
+
+snippet scope
+	{-# LANGUAGE ScopedTypeVariables #-}
+
+snippet ffi
+	{-# LANGUAGE ForeignFunctionInterface #-}
+
+snippet flex
+	{-# LANGUAGE FlexibleInstances #-}
+	{-# LANGUAGE FlexibleContexts #-}
+	{-# LANGUAGE TypeSynonymInstances #-}
+
+snippet syn
+	{-# LANGUAGE TypeSynonymInstances #-}
+
+snippet mparam
+	{-# LANGUAGE MultiParamTypeClasses #-}
+
+snippet bang
+	{-# LANGUAGE BangPatterns #-}
+
+snippet gnew
+	{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+
+snippet mono
+	{-# LANGUAGE NoMonomorphismRestriction #-}
+
+snippet stand
+	{-# LANGUAGE StandaloneDeriving #-}
+
+snippet temp
+	{-# LANGUAGE TemplateHaskell #-}
+
+snippet derive
+	{-# LANGUAGE DeriveDataTypeable #-}
+	{-# LANGUAGE DeriveGeneric #-}
+	{-# LANGUAGE DeriveFunctor #-}
+	{-# LANGUAGE DeriveTraversable #-}
+	{-# LANGUAGE DeriveFoldable #-}
+
+snippet type
+	{-# LANGUAGE GADTs #-}
+	{-# LANGUAGE TypeFamilies #-}
+	{-# LANGUAGE TypeOperators #-}
+	{-# LANGUAGE DataKinds #-}
+	{-# LANGUAGE PolyKinds #-}
+	{-# LANGUAGE KindSignatures #-}
+	{-# LANGUAGE FlexibleInstances #-}
+	{-# LANGUAGE FlexibleContexts #-}
+	{-# LANGUAGE UndecidableInstances #-}
+
+	import GHC.TypeLits
+	import Data.Proxy
+	import Data.Type.Equality
+	import Data.Reflection
+	import Data.Constraint
+	import GHC.Exts (Constraint)
+	import GHC.Prim (Any, AnyK)
+
+snippet crazy
+	{-# LANGUAGE GADTs #-}
+	{-# LANGUAGE DataKinds #-}
+	{-# LANGUAGE RankNTypes #-}
+	{-# LANGUAGE TypeFamilies #-}
+	{-# LANGUAGE TypeOperators #-}
+	{-# LANGUAGE KindSignatures #-}
+	{-# LANGUAGE FlexibleInstances #-}
+	{-# LANGUAGE FlexibleContexts #-}
+	{-# LANGUAGE MultiParamTypeClasses #-}
+	{-# LANGUAGE UndecidableInstances #-}
+	{-# LANGUAGE ExistentialQuantification #-}
+
+snippet main
+	main = return ()
+
+snippet opt
+	{-# OPTIONS_GHC ${1} #-}
+
+snippet wall
+	{-# OPTIONS_GHC -Wall #-}
+
+snippet nowarn
+	{-# OPTIONS_GHC -fno-warn-name-shadowing  #-}
+	{-# OPTIONS_GHC -fno-warn-type-defaults   #-}
+	{-# OPTIONS_GHC -fno-warn-unused-do-bind  #-}
+
+snippet box
+	--------------------------------------------------------------------
+	-- |
+	-- Module    :   
+	-- Copyright :  (c) Stephen Diehl 2014
+	-- License   :  MIT
+	-- Maintainer:  stephen.m.diehl@gmail.com
+	-- Stability :  experimental
+	-- Portability: non-portable
+	--
+	--------------------------------------------------------------------
+
+snippet dd
+	deriving (Eq, Ord, Show, Typeable, Data, Generic)
+
+snippet inl
+	{-# INLINE ${1} #-}
+
+snippet up
+	{-# UNPACK #-}
+
+snippet un
+	undefined
+snippet er
+	error "${1}"
+
+snippet prelude
+	import qualified Prelude as P
+
+	import  Data.List hiding ( 
+	    all , and , any , concat , concatMap , elem , filter ,
+	    find , foldl , foldl' , foldl1 , foldr , foldr1 ,
+	    mapAccumL , mapAccumR , maximum , maximumBy , minimum , 
+	    minimumBy , notElem , or , product , sum )
+
+	import Control.Monad hiding ( 
+	    forM , forM_ , mapM , mapM_ , msum , sequence , sequence_ )
+
+snippet lens
+	{-# LANGUAGE TemplateHaskell #-}
+	import Control.Lens ((&), (^.), (^?), (.~), makeLenses)
