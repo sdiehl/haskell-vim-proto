@@ -201,9 +201,9 @@ snippet box
 	--------------------------------------------------------------------
 	-- |
 	-- Module    :   
-	-- Copyright :  (c) Stephen Diehl 2014
+	-- Copyright :  (c) <author> 2016
 	-- License   :  MIT
-	-- Maintainer:  stephen.m.diehl@gmail.com
+	-- Maintainer:  <email>
 	-- Stability :  experimental
 	-- Portability: non-portable
 	--
@@ -223,18 +223,3 @@ snippet un
 snippet er
 	error "${1}"
 
-snippet prelude
-	import qualified Prelude as P
-
-	import  Data.List hiding ( 
-	    all , and , any , concat , concatMap , elem , filter ,
-	    find , foldl , foldl' , foldl1 , foldr , foldr1 ,
-	    mapAccumL , mapAccumR , maximum , maximumBy , minimum , 
-	    minimumBy , notElem , or , product , sum )
-
-	import Control.Monad hiding ( 
-	    forM , forM_ , mapM , mapM_ , msum , sequence , sequence_ )
-
-snippet lens
-	{-# LANGUAGE TemplateHaskell #-}
-	import Control.Lens ((&), (^.), (^?), (.~), makeLenses)
