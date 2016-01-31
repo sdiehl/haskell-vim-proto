@@ -4,6 +4,10 @@ Minimalist starter config for vim and Haskell.
 
 * **[Article](http://www.stephendiehl.com/posts/vim_2016.html)**
 
+For a more fully featured setup script see:
+
+* **[haskell-vim-now]( https://github.com/begriffs/haskell-vim-now)**
+
 #### Setup
 
 ```bash
