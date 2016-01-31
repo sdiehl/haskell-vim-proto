@@ -1,4 +1,8 @@
 " https://github.com/sdiehl/haskell-vim-proto
+" Each of the sections can be copied into your existing config independent of
+" the other ones.
+
+" == basic ==
 
 syntax on
 filetype plugin indent on
@@ -33,7 +37,7 @@ set cmdheight=1
 
 execute pathogen#infect()
 
-" syntastic
+" == syntastic ==
 
 map <Leader>s :SyntasticToggleMode<CR>
 
@@ -46,14 +50,14 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
-" ghc-mod
+" == ghc-mod ==
 
 map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
 
-" supertab
+" == supertab ==
 
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
@@ -65,16 +69,16 @@ else " no gui
   endif
 endif
 
-" neco-ghc
+" == neco-ghc ==
 
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
-" nerd-tree
+" == nerd-tree ==
 
 map <Leader>n :NERDTreeToggle<CR>
 
-" tabular
+" == tabular ==
 
 let g:haskell_tabular = 1
 
@@ -82,7 +86,7 @@ vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 
-" ctrl-p
+" == ctrl-p ==
 
 map <silent> <Leader>t :CtrlP()<CR>
 noremap <leader>b<space> :CtrlPBuffer<cr>
