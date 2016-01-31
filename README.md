@@ -13,7 +13,7 @@ For a more fully featured setup script see:
 ```bash
 $ git clone --recursive https://github.com/sdiehl/haskell-vim-proto.git 
 $ cd haskell-vim-proto
-$ cp -n vimrc ~/.vimrc   # Will not clobberr existing config
+$ cp -n vimrc ~/.vimrc   # Will not clobber existing config
 $ cp -rn vim ~/.vim
 ```
 Installs the following submodules using pathogen.
