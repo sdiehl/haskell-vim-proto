@@ -184,7 +184,7 @@ syn match hsModuleCommentA "--.*\n"
   \ contains=hsCommentTodo,@Spell contained
   \ nextgroup=hsModuleCommentA,hsModuleExports,hsModuleWhereLabel skipwhite skipnl
 
-syn region hsModuleExports start="(" end=")" contained
+syn match hsModuleExports "\(\w\*\)" contained
    \ nextgroup=hsModuleCommentB,hsModuleWhereLabel skipwhite skipnl
    \ contains=hsBlockComment,hsLineComment,hsType,hsDelimTypeExport,hs_hlFunctionName,hs_OpFunctionName,hsExportModule
 
