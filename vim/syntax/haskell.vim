@@ -141,11 +141,11 @@ sy match hsImportParams "as\s\+\(\w\+\)" contained
 sy match hsImportParams "hiding" contained
     \ contains=hsHidingLabel
     \ nextgroup=hsImportParams,hsImportIllegal skipwhite 
-sy region hsImportParams start="(" end=")" contained
-    \ contains=hsBlockComment,hsLineComment, hsType,hsDelimTypeExport,hs_hlFunctionName,hs_OpFunctionName
+sy match hsImportParams "\(\w\*\)" contained
+    \ contains=hsBlockComment,hsLineComment,hsType,hsDelimTypeExport,hs_hlFunctionName,hs_OpFunctionName
     \ nextgroup=hsImportIllegal skipwhite
 
-" hi hsImport guibg=red
+"hi hsImport guibg=red
 "hi hsImportParams guibg=bg
 "hi hsImportIllegal guibg=bg
 "hi hsModuleName guibg=bg
