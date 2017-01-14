@@ -32,6 +32,7 @@ syn match	cabalCategory	"\c\<benchmark\>"
 syn match	cabalCategory	"\c\<test-suite\>"
 syn match	cabalCategory	"\c\<source-repository\>"
 syn match	cabalCategory	"\c\<flag\>"
+syn match	cabalCategory	"\c\<custom-setup\>"
 
 syn keyword     cabalConditional    if else
 syn match       cabalOperator       "&&\|||\|!\|==\|>=\|<="
@@ -104,6 +105,7 @@ syn match	cabalStatement	/^\c\s*\<other-extensions\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<other-modules\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<package-url\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<pkgconfig-depends\s*:/me=e-1
+syn match	cabalStatement	/^\c\s*\<setup-depends\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<stability\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<subdir\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<synopsis\s*:/me=e-1
