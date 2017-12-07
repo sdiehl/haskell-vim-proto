@@ -28,6 +28,7 @@ endif
 
 syn match	cabalCategory	"\c\<executable\>"
 syn match	cabalCategory	"\c\<library\>"
+syn match	cabalCategory	"\c\<foreign-library\>"
 syn match	cabalCategory	"\c\<benchmark\>"
 syn match	cabalCategory	"\c\<test-suite\>"
 syn match	cabalCategory	"\c\<source-repository\>"
@@ -35,8 +36,8 @@ syn match	cabalCategory	"\c\<flag\>"
 syn match	cabalCategory	"\c\<custom-setup\>"
 
 syn keyword     cabalConditional    if else
-syn match       cabalOperator       "&&\|||\|!\|==\|>=\|<="
-syn keyword     cabalFunction       os arche impl flag
+syn match       cabalOperator       "&&\|||\|!\|==\|>=\|<=\|<\|>\|^>="
+syn keyword     cabalFunction       os arch impl flag
 syn match       cabalComment    /--.*$/
 syn match       cabalVersion    "\d\+\(\.\(\d\)\+\)\+\(\.\*\)\?"
 
@@ -59,6 +60,7 @@ syn match	cabalStatement	/^\c\s*\<author\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<branch\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<bug-reports\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<build-depends\s*:/me=e-1
+syn match	cabalStatement	/^\c\s*\<build-tool-depends\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<build-tools\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<build-type\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<buildable\s*:/me=e-1
@@ -98,6 +100,7 @@ syn match	cabalStatement	/^\c\s*\<license\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<location\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<main-is\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<maintainer\s*:/me=e-1
+syn match	cabalStatement	/^\c\s*\<manual\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<module\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<name\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<nhc98-options\s*:/me=e-1
@@ -114,6 +117,8 @@ syn match	cabalStatement	/^\c\s*\<tested-with\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<type\s*:/me=e-1
 syn match	cabalStatement	/^\c\s*\<version\s*:/me=e-1
 
+syn match	cabalXStatement	/^\c\s*\<x-[a-z_\-]\+\s*:/me=e-1
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
@@ -129,6 +134,7 @@ if version >= 508 || !exists("did_cabal_syn_inits")
   HiLink cabalTruth         Boolean
   HiLink cabalComment       Comment
   HiLink cabalStatement     Statement
+  HiLink cabalXStatement    Keyword
   HiLink cabalCategory      Type
   HiLink cabalFunction      Function
   HiLink cabalConditional   Conditional
